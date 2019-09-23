@@ -9,12 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+var playerOneScore = 0
+var playerTwoScore = 0
+var turn = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    func updatePlayerOneScore() -> Int {
+        playerOneScore += turnPoints
+        return playerOneScore
+    }
+    func updatePlayerTwoScore() -> Int {
+        playerTwoScore += turnPoints
+        return playerTwoScore
+    }
 
 }
 
