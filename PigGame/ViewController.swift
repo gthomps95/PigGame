@@ -19,6 +19,23 @@ var turnPoints = 0
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    func passPlayerOne() {
+        playerOneTurn = false
+        playerTwoTurn = true
+    }
+    func passPlayerTwo() {
+        playerTwoTurn = false
+        playerOneTurn = true
+    }
+    @IBAction func PassTurn(_ sender: Any) {
+        if (playerOneTurn == true) {
+            updatePlayerOneScore()
+            passPlayerOne()
+        } else {
+            updatePlayerTwoScore()
+            passPlayerTwo()
+        }
+    }
     func updatePlayerOneScore() -> Int {
         playerOneScore += turnPoints
         return playerOneScore
