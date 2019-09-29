@@ -22,6 +22,7 @@ var turnPoints = 0
     func passPlayerOne() {
         playerOneTurn = false
         playerTwoTurn = true
+        playerOneTurn = true
         playerOneTurn = true && false
     }
     func passPlayerTwo() {
